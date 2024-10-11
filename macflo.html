@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="lv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>macflo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+       .nosaukums {
+            color: #1c2c35;
+            font-family: Volkorn, serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 10px;
+       }
+       
+       .nav-text {
+            color: #1c2c35;
+            font-family: Bitter, serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 20px; /* отступ между ссылками */
+            text-decoration: none; /* убираем подчеркивание */
+       }
+       
+       .container-1 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* распределение элементов по всей ширине */
+            align-items: center; /* центрирование по вертикали */
+            background-color: #56dba1;
+            padding: 15px;
+            box-sizing: border-box; /* включаем padding в расчет ширины */
+       }
+       
+       .misija {
+            max-width: 940px;
+            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
+            justify-content: space-between; /* Отправляем элементы по разным сторонам */
+            align-items: center; /* Центрируем элементы по вертикали */
+            margin-top: 90px;
+            margin-bottom: 90px;
+            padding-left: 30px;
+            padding-right: 30px;
+       }
+       
+       .merkis {
+            color: #1c2c35;
+            font-family: Bitter, serif;
+            font-size: 46px;
+       }
+       
+       .text {
+            color: #1c2c35;
+            font-family: Bitter, serif;
+            font-weight: 700;
+            font-size: 18px;
+       }
+
+       .text-container {
+            width: 50%; /* Задаем ширину для текстового контейнера */
+       }
+       
+       .image-container {
+            width: 50%; /* Задаем ширину для контейнера с картинкой */
+            display: flex;
+            justify-content: flex-end; /* Размещаем картинку справа */
+       }
+       
+       .image-container img {
+            max-width: 100%; /* Изображение адаптируется по ширине */
+            height: auto;
+       }
+
+       nav {
+            display: flex;
+       }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container-1">
+        <h1 class="nosaukums">macflo</h1>
+          <nav role="navigation">
+            <a href="#misija" class="nav-text">misija</a>
+            <a href="#resursi" class="nav-text" style="padding-right: 10px">resursi</a>
+ 
