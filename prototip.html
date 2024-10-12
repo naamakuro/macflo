@@ -110,7 +110,6 @@
             border-radius: 50px; /* Oval shape */
             margin-right: 10px;
             font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
             text-align: center;
             font-family: Bitter, serif;
             font-weight: 700;
@@ -128,10 +127,10 @@
         /* Tab Content Area (Oval) */
         .tab-content {
             display: none;
-            padding: 30px 20px; /* Added left and right padding */
+            /* Added top, left, right, bottom padding */
             border: 1px solid #ddd;
             background-color: #f9f9f9;
-            border-radius: 50px; /* Oval content */
+            border-radius: 25px; /* Oval content */
             width: 100%;
             margin-top: 10px; /* Reduced the space between the tab menu and the content to 10px */
             box-sizing: border-box; /* Ensure padding is included in width calculation */
@@ -139,6 +138,39 @@
 
         .tab-content.active {
             display: block;
+        }
+        
+         /* Oval Table Styles */
+        .oval-table {
+            width: 100%; /* Fill the container */
+            border-radius: 25px; 
+            border-collapse: collapse;
+            background-color: #ffffff;
+            /* Make the table oval */
+            overflow: hidden; /* Ensures rounded corners apply to the content */
+            table-layout: fixed; /* This ensures the table will fill its container */
+        }
+
+        .oval-table th {
+            background-color: #1e2d32;
+            color: white;
+            padding: 10px; /* Padding inside header */
+            text-align: left;
+            font-family: Geaorgia, serif;
+            font-size: 15px;
+        }
+
+        .oval-table td {
+            padding: 10px; /* Padding inside cells */
+            font-family: Georgia, serif;
+            font-size: 15px;
+            border-bottom: 3px solid #f9f9f9;
+            
+        }
+        
+         a {
+            color: #33c481; /* Цвет для всех ссылок */
+            
         }
         
     </style>
@@ -164,7 +196,7 @@
     </section>
     
     
-     <!-- Tabs Section with Content -->
+      <!-- Tabs Section with Content -->
     <section id="resursi" class="resursi">
     <div class="tabs-content-container">
         <!-- Tabs Menu (Above the content, positioned top-left) -->
@@ -176,8 +208,59 @@
 
         <!-- Tab Content (Oval Content, placed below tabs) -->
         <div id="tab1" class="tab-content active">
-            <h2>Tab 1 Content</h2>
-            <p>This is the content for Tab 1. It is displayed inside an oval-shaped box below the tab menu.</p>
+            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 10%;">
+                    <col style="width: 15%;">
+                    <col style="width: 35%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                
+                <thead>
+                    <tr>
+                        <th>Nosaukums</th>
+                        <th>Klases</th>
+                        <th>Priekšmets</th>
+                        <th>Īss apraksts</th>
+                        <th>Saite</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Uzdevumi.lv</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>Plašu materiālu klāsts no 1. līdz 12.klasei. Uzdevumi, teorija un testi mācību priekšmetos. Katram uzdevumam ir pieejami risinājuma soļi, lai skolēns varētu patstāvīgi apgūt mācību vielu un mācīties no savām kļūdām. Skolotājiem portālā ir iespējams veidot un nosūtīt skolēniem tiešsaistes mājasdarbus un pārbaudes darbus, bet vecākiem – sekot līdzi bērna progresam un rezultātiem mācībās.</td>
+                        <td><a href="https://www.uzdevumi.lv" target="_blank">https://www.uzdevumi.lv</a></td>
+                    </tr>
+                    <tr>
+                        <td>Soma.lv</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>“Lielvārds” grāmatu e-versijas, viedgrāmatas, zinātniski mācību video, interaktīvās darba lapas, drukājamās darba lapas no pirmsskolas līdz 12. klasei matemātikā, latviešu valodā, dabaszinībās, bioloģijā, fizikā, ķīmijā un ģeogrāfijā. Pieejama no jebkuras ierīces: datora, viedtālruņa, planšetdatora un pat jaunākās paaudzes televizora. Lai piekļūtu materiāliem, jūs varat pieslēgties, izmantojot E-klases vai MyKoob lietotāju pases. Soma.lv Klasei funkcionalitāte nodrošina iespēju skolotājam E-klasē nosūtīt skolēniem konkrētas mācību grāmatu tēmas, mācību video, uzdevumus un sekot līdzi skolēnu uzdevumu un testu izpildei, turklāt tā automātiski sniedz atgriezenisko saiti skolēniem.</td>
+                        <td><a href="https://soma.lv" target="_blank">https://soma.lv</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>FIZMIX.lv</td>
+                        <td>8.-12.</td>
+                        <td>Fizika</td>
+                        <td>Portālā FIZMIX.lv saprotami, interesanti un ar praktiskiem piemēriem tiek skaidrota fizikas teorija, pievēršot pastiprinātu uzmanību elektrodrošībai un energoefektivitātei.</td>
+                        <td><a href="https://www.fizmix.lv" target="_blank">https://www.fizmix.lv</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>VISC</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>Valsts izglītības satura centra un sadarbības partneru izstrādātie metodiskie materiāli. PDF faili dažādiem mācību priekšmetiem.</td>
+                        <td><a href="https://visc.gov.lv/vispizglitiba/saturs/metmat.html" target="_blank">https://visc.gov.lv/vispizglitiba/saturs/metmat.html</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
         </div>
 
         <div id="tab2" class="tab-content">
@@ -191,7 +274,6 @@
         </div>
     </div>
     </section>
-    
     
 
     <script>
@@ -217,6 +299,7 @@
             event.currentTarget.classList.add("active");
         }
     </script>
+
 
 </body>
 </html>
