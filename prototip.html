@@ -173,6 +173,30 @@
             
         }
         
+        /* Footer Section */
+        .footer {
+            max-width: 85%; /* Ограничиваем максимальную ширину секции */
+            margin: 90px auto; /* Центрируем секцию по горизонтали */
+            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
+            justify-content: space-between; /* Отправляем элементы по разным сторонам */
+            align-items: center; /* Центрируем элементы по вертикали */
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .footer-line {
+            height: 5px;
+            background-color: #56dba1; /* Green color */
+            margin-top: 10px; /* Space above the line */
+            width: 100%;
+        }
+        
+        .paldies {
+            color: #1c2c35;
+            font-family: Broadway, serif;
+            font-size: 35px;
+       }
+        
     </style>
 
 </head>
@@ -322,6 +346,20 @@
         </div>
     
     </section>
+    
+    
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="paldies">Paldies, ka izmantojat mūsu vietni!</div>
+        <form action="#" method="post">
+            <label for="website">Kādu digitālo resursu, jūsuprāt, vajadzētu pievienot?</label><br>
+            <input type="text" id="website" name="website" placeholder="Jūsu idejas" required>
+            <button type="submit">Nosūtīt</button>
+        </form>
+        
+    </div>
+    
+    <div class="footer-line"></div>
     
 
     <script>
