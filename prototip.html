@@ -1,0 +1,222 @@
+<!DOCTYPE html>  
+<html lang="lv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>macflo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+       .nosaukums {
+            color: #1c2c35;
+            font-family: Volkorn, serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 10px;
+       }
+       
+       .nav-text {
+            color: #1c2c35;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 20px; /* отступ между ссылками */
+            text-decoration: none; /* убираем подчеркивание */
+       }
+       
+       .container-1 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* распределение элементов по всей ширине */
+            align-items: center; /* центрирование по вертикали */
+            background-color: #56dba1;
+            padding: 15px;
+            box-sizing: border-box; /* включаем padding в расчет ширины */
+       }
+       
+       .misija {
+            max-width: 85%; /* Ограничиваем максимальную ширину секции */
+            margin: 90px auto; /* Центрируем секцию по горизонтали */
+            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
+            justify-content: space-between; /* Отправляем элементы по разным сторонам */
+            align-items: center; /* Центрируем элементы по вертикали */
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+       
+       .merkis {
+            color: #1c2c35;
+            font-family: Broadway, serif;
+            font-size: 55px;
+       }
+       
+       .text {
+            color: #1c2c35;
+            font-family: Georgia, serif;
+            font-weight: 700;
+            font-size: 25px;
+       }
+
+       .text-container {
+            width: 50%; /* Задаем ширину для текстового контейнера */
+            margin-right: 40px;
+       }
+       
+       .image-container {
+            width: 50%; /* Задаем ширину для контейнера с картинкой */
+            display: flex;
+            justify-content: flex-end; /* Размещаем картинку справа */
+       }
+       
+       .image-container img {
+            max-width: 100%; /* Изображение адаптируется по ширине */
+            height: auto;
+       }
+
+       nav {
+            display: flex;
+       }
+       
+        /* Main container for tabs and content */
+        .tabs-content-container {
+            max-width: 900px; /* Limit max-width */
+            margin: 50px auto; /* Center it horizontally */
+            padding-top: 40px; /* Space for the tab menu */
+            position: relative; /* For absolute positioning of tab menu */
+            padding-left: 30px; /* Padding left and right for tab content */
+            padding-right: 30px;
+        }
+
+        /* Oval Tabs Menu */
+        .tabs {
+            position: absolute; /* Positioned within the tab content */
+            top: -25px; /* Moves the tabs upwards above the content */
+            left: 30px; /* Aligns the tabs to the left of the content */
+            display: flex;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 50px; /* Oval shape */
+            margin-right: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            font-family: Bitter, serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .tab-button.active {
+            background-color: #56dba1;
+            color: #fff;
+            font-family: Bitter, serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Tab Content Area (Oval) */
+        .tab-content {
+            display: none;
+            padding: 30px 20px; /* Added left and right padding */
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 50px; /* Oval content */
+            width: 100%;
+            margin-top: 10px; /* Reduced the space between the tab menu and the content to 10px */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container-1">
+        <h1 class="nosaukums">macflo</h1>
+          <nav role="navigation">
+            <a href="#misija" class="nav-text">misija</a>
+            <a href="#resursi" class="nav-text" style="padding-right: 10px">resursi</a>
+          </nav>
+    </div>
+    
+    <section id="misija" class="misija">
+       <div class="text-container">
+         <h1 class="merkis">Platformas mērķis</h1>
+         <p class="text">Nodrošināt skolēnus ar informāciju par pieejamiem mācību resursiem, piedāvājot plašu mācību materiālu, rīku un avotu klāstu. Tā kalpo kā ceļvedis, lai viegli atrastu un piekļūtu dažādiem resursiem, kas veicina izglītības panākumus un zināšanu pilnveidi.</p>
+       </div>
+       <div class="image-container">
+         <img src="https://i.pinimg.com/564x/48/cc/24/48cc24070f83f56a25eb8b00862ef514.jpg" alt="image">
+       </div>  
+    </section>
+    
+    
+     <!-- Tabs Section with Content -->
+    <section id="resursi" class="resursi">
+    <div class="tabs-content-container">
+        <!-- Tabs Menu (Above the content, positioned top-left) -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">Visi digitālie resursi</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Pamatskolai</button>
+            <button class="tab-button" onclick="openTab(event, 'tab3')">Vidusskolai</button>
+        </div>
+
+        <!-- Tab Content (Oval Content, placed below tabs) -->
+        <div id="tab1" class="tab-content active">
+            <h2>Tab 1 Content</h2>
+            <p>This is the content for Tab 1. It is displayed inside an oval-shaped box below the tab menu.</p>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Tab 2 Content</h2>
+            <p>This is the content for Tab 2. It is displayed inside an oval-shaped box below the tab menu.</p>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <h2>Tab 3 Content</h2>
+            <p>This is the content for Tab 3. It is displayed inside an oval-shaped box below the tab menu.</p>
+        </div>
+    </div>
+    </section>
+    
+    
+
+    <script>
+        function openTab(event, tabName) {
+            var i, tabContent, tabButtons;
+
+            // Hide all tab content
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
