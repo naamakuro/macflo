@@ -83,7 +83,175 @@
        nav {
             display: flex;
        }
+       
+        /* Main container for tabs and content */
+        .tabs-content-container {
+            max-width: 1100px; /* Limit max-width */
+            margin: 50px auto; /* Center it horizontally */
+            padding-top: 40px; /* Space for the tab menu */
+            position: relative; /* For absolute positioning of tab menu */
+            padding-left: 30px; /* Padding left and right for tab content */
+            padding-right: 30px;
+        }
+
+        /* Oval Tabs Menu */
+        .tabs {
+            position: absolute; /* Positioned within the tab content */
+            top: -25px; /* Moves the tabs upwards above the content */
+            left: 30px; /* Aligns the tabs to the left of the content */
+            display: flex;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 50px; /* Oval shape */
+            margin-right: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Bitter, serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .tab-button.active {
+            background-color: #56dba1;
+            color: #fff;
+            font-family: Bitter, serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Tab Content Area (Oval) */
+        .tab-content {
+            display: none;
+            /* Added top, left, right, bottom padding */
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 25px; /* Oval content */
+            width: 100%;
+            margin-top: 10px; /* Reduced the space between the tab menu and the content to 10px */
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+        }
+
+        .tab-content.active {
+            display: block;
+        }
         
+         /* Oval Table Styles */
+        .oval-table {
+            width: 100%; /* Fill the container */
+            border-radius: 25px; 
+            border-collapse: collapse;
+            background-color: #ffffff;
+            /* Make the table oval */
+            overflow: hidden; /* Ensures rounded corners apply to the content */
+            table-layout: fixed; /* This ensures the table will fill its container */
+        }
+
+        .oval-table th {
+            background-color: #1e2d32;
+            color: white;
+            padding: 10px; /* Padding inside header */
+            text-align: left;
+            font-family: Geaorgia, serif;
+            font-size: 15px;
+        }
+
+        .oval-table td {
+            padding: 15px; /* Padding inside cells */
+            font-family: Georgia, serif;
+            font-size: 15px;
+            border-bottom: 3px solid #f9f9f9;
+            
+            
+            
+        }
+        
+         a {
+            color: #33c481; /* Цвет для всех ссылок */
+            word-break: break-all;
+            
+        }
+        
+        /* Footer Section */
+        .footer {
+            max-width: 85%; /* Ограничиваем максимальную ширину секции */
+            margin: 90px auto; /* Центрируем секцию по горизонтали */
+            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
+            justify-content: space-between; /* Отправляем элементы по разным сторонам */
+            align-items: center; /* Центрируем элементы по вертикали */
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .footer-line {
+            height: 15px;
+            background-color: #56dba1; /* Green color */
+            margin-top: 10px; /* Space above the line */
+            width: 100%;
+        }
+        
+        .paldies {
+            color: #1c2c35;
+            font-family: Broadway, serif;
+            font-size: 35px;
+        
+       }
+       
+       .form-jaut {
+            color: #1c2c35;
+            font-family: Volkorn, serif;
+            font-size: 25px;
+            margin-bottom: 5px; /* Add space between the label and the input */
+            display: block;
+       }
+       
+       .form-content {
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 50px; /* Oval shape */
+            margin-bottom: 15px;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .form-submit {
+           background-color: #56dba1;
+           color: white;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 50px; /* Oval button */
+           cursor: pointer;
+           font-size: 15px;
+           font-weight: bold;
+           font-family: Georgia, serif;
+        }
+
+       .form-submit:hover {
+           background-color: #45c08a; /* Darken button on hover */
+        }
+
+       .form-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 15px;
+          max-width: 500px;
+          margin: 0 auto;
+          margin-top: 20px;
+       }
+
+
+
     </style>
 
 </head>
@@ -105,5 +273,176 @@
          <img src="https://i.pinimg.com/564x/48/cc/24/48cc24070f83f56a25eb8b00862ef514.jpg" alt="image">
        </div>  
     </section>
+    
+    
+      <!-- Tabs Section with Content -->
+    <section id="resursi" class="resursi">
+    <div class="tabs-content-container">
+        <!-- Tabs Menu (Above the content, positioned top-left) -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">Visi digitālie resursi</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Pamatskolai</button>
+            <button class="tab-button" onclick="openTab(event, 'tab3')">Vidusskolai</button>
+        </div>
+
+        <!-- Tab Content (Oval Content, placed below tabs) -->
+        <div id="tab1" class="tab-content active">
+            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 10%;">
+                    <col style="width: 15%;">
+                    <col style="width: 35%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                
+                <thead>
+                    <tr>
+                        <th>Nosaukums</th>
+                        <th>Klases</th>
+                        <th>Priekšmets</th>
+                        <th>Īss apraksts</th>
+                        <th>Saite</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Uzdevumi.lv</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>Plašu materiālu klāsts no 1. līdz 12.klasei. Uzdevumi, teorija un testi mācību priekšmetos. Katram uzdevumam ir pieejami risinājuma soļi, lai skolēns varētu patstāvīgi apgūt mācību vielu un mācīties no savām kļūdām. Skolotājiem portālā ir iespējams veidot un nosūtīt skolēniem tiešsaistes mājasdarbus un pārbaudes darbus, bet vecākiem – sekot līdzi bērna progresam un rezultātiem mācībās.</td>
+                        <td><a href="https://www.uzdevumi.lv" target="_blank">https://www.uzdevumi.lv</a></td>
+                    </tr>
+                    <tr>
+                        <td>Soma.lv</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>“Lielvārds” grāmatu e-versijas, viedgrāmatas, zinātniski mācību video, interaktīvās darba lapas, drukājamās darba lapas no pirmsskolas līdz 12. klasei matemātikā, latviešu valodā, dabaszinībās, bioloģijā, fizikā, ķīmijā un ģeogrāfijā. Pieejama no jebkuras ierīces: datora, viedtālruņa, planšetdatora un pat jaunākās paaudzes televizora. Lai piekļūtu materiāliem, jūs varat pieslēgties, izmantojot E-klases vai MyKoob lietotāju pases. Soma.lv Klasei funkcionalitāte nodrošina iespēju skolotājam E-klasē nosūtīt skolēniem konkrētas mācību grāmatu tēmas, mācību video, uzdevumus un sekot līdzi skolēnu uzdevumu un testu izpildei, turklāt tā automātiski sniedz atgriezenisko saiti skolēniem.</td>
+                        <td><a href="https://soma.lv" target="_blank">https://soma.lv</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>FIZMIX.lv</td>
+                        <td>8.-12.</td>
+                        <td>Fizika</td>
+                        <td>Portālā FIZMIX.lv saprotami, interesanti un ar praktiskiem piemēriem tiek skaidrota fizikas teorija, pievēršot pastiprinātu uzmanību elektrodrošībai un energoefektivitātei.</td>
+                        <td><a href="https://www.fizmix.lv" target="_blank">https://www.fizmix.lv</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>VISC</td>
+                        <td>1.-12.</td>
+                        <td>Visi</td>
+                        <td>Valsts izglītības satura centra un sadarbības partneru izstrādātie metodiskie materiāli. PDF faili dažādiem mācību priekšmetiem.</td>
+                        <td><a href="https://visc.gov.lv/vispizglitiba/saturs/metmat.html" target="_blank">https://visc.gov.lv/vispizglitiba/saturs/metmat.html</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab2" class="tab-content">
+             <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 10%;">
+                    <col style="width: 15%;">
+                    <col style="width: 35%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                
+                <thead>
+                    <tr>
+                        <th>Nosaukums</th>
+                        <th>Klases</th>
+                        <th>Priekšmets</th>
+                        <th>Īss apraksts</th>
+                        <th>Saite</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Šeit jābūt mācību resursi pamatskolai</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 10%;">
+                    <col style="width: 15%;">
+                    <col style="width: 35%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                
+                <thead>
+                    <tr>
+                        <th>Nosaukums</th>
+                        <th>Klases</th>
+                        <th>Priekšmets</th>
+                        <th>Īss apraksts</th>
+                        <th>Saite</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Šeit jābūt mācību resursi vidusskolai</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+    </section>
+    
+    
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="paldies">Paldies, ka izmantojat mūsu vietni!</div>
+        <div class="form-container">
+        <form action="#" method="post">
+            <label class="form-jaut" for="website">Kādu digitālo resursu, Jūsuprāt, vajadzētu pievienot?</label><br>
+            <input type="text" id="website" name="website" class="form-content" placeholder="Jūsu idejas" required>
+            <button type="submit" class="form-submit">Nosūtīt</button>
+        </form>
+        
+    </div>
+    </div>
+    
+    <div class="footer-line"></div>
+    
+
+    <script>
+        function openTab(event, tabName) {
+            var i, tabContent, tabButtons;
+
+            // Hide all tab content
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+
 </body>
 </html>
