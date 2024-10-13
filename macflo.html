@@ -27,26 +27,26 @@
             font-family: Georgia, serif;
             font-size: 20px;
             font-weight: 700;
-            margin-left: 20px; /* отступ между ссылками */
-            text-decoration: none; /* убираем подчеркивание */
+            margin-left: 20px; 
+            text-decoration: none;
        }
        
        .container-1 {
             width: 100%;
             display: flex;
-            justify-content: space-between; /* распределение элементов по всей ширине */
-            align-items: center; /* центрирование по вертикали */
+            justify-content: space-between;
+            align-items: center; 
             background-color: #56dba1;
             padding: 15px;
-            box-sizing: border-box; /* включаем padding в расчет ширины */
+            box-sizing: border-box;
        }
        
        .misija {
-            max-width: 85%; /* Ограничиваем максимальную ширину секции */
-            margin: 90px auto; /* Центрируем секцию по горизонтали */
-            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
-            justify-content: space-between; /* Отправляем элементы по разным сторонам */
-            align-items: center; /* Центрируем элементы по вертикали */
+            max-width: 85%; 
+            margin: 90px auto; 
+            display: flex; 
+            justify-content: space-between;
+            align-items: center; 
             padding-left: 30px;
             padding-right: 30px;
         }
@@ -65,18 +65,18 @@
        }
 
        .text-container {
-            width: 50%; /* Задаем ширину для текстового контейнера */
+            width: 50%; 
             margin-right: 40px;
        }
        
        .image-container {
-            width: 50%; /* Задаем ширину для контейнера с картинкой */
+            width: 50%; 
             display: flex;
-            justify-content: flex-end; /* Размещаем картинку справа */
+            justify-content: flex-end; 
        }
        
        .image-container img {
-            max-width: 100%; /* Изображение адаптируется по ширине */
+            max-width: 100%;
             height: auto;
        }
 
@@ -84,21 +84,21 @@
             display: flex;
        }
        
-        /* Main container for tabs and content */
+       
         .tabs-content-container {
-            max-width: 1100px; /* Limit max-width */
-            margin: 50px auto; /* Center it horizontally */
-            padding-top: 40px; /* Space for the tab menu */
-            position: relative; /* For absolute positioning of tab menu */
-            padding-left: 30px; /* Padding left and right for tab content */
+            max-width: 1100px; 
+            margin: 50px auto; 
+            padding-top: 40px; 
+            position: relative; 
+            padding-left: 30px; 
             padding-right: 30px;
         }
 
-        /* Oval Tabs Menu */
+       
         .tabs {
-            position: absolute; /* Positioned within the tab content */
-            top: -25px; /* Moves the tabs upwards above the content */
-            left: 30px; /* Aligns the tabs to the left of the content */
+            position: absolute; 
+            top: -25px; 
+            left: 30px; 
             display: flex;
         }
 
@@ -107,7 +107,7 @@
             cursor: pointer;
             background-color: #f1f1f1;
             border: 1px solid #ddd;
-            border-radius: 50px; /* Oval shape */
+            border-radius: 50px; 
             margin-right: 10px;
             font-weight: bold;
             text-align: center;
@@ -124,44 +124,43 @@
             font-size: 18px;
         }
 
-        /* Tab Content Area (Oval) */
+       
         .tab-content {
             display: none;
-            /* Added top, left, right, bottom padding */
             border: 1px solid #ddd;
             background-color: #f9f9f9;
-            border-radius: 25px; /* Oval content */
+            border-radius: 25px; 
             width: 100%;
-            margin-top: 10px; /* Reduced the space between the tab menu and the content to 10px */
-            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            margin-top: 10px; 
+            box-sizing: border-box; 
         }
 
         .tab-content.active {
             display: block;
         }
         
-         /* Oval Table Styles */
+       
         .oval-table {
-            width: 100%; /* Fill the container */
+            width: 100%; 
             border-radius: 25px; 
             border-collapse: collapse;
             background-color: #ffffff;
-            /* Make the table oval */
-            overflow: hidden; /* Ensures rounded corners apply to the content */
-            table-layout: fixed; /* This ensures the table will fill its container */
+           
+            overflow: hidden; 
+            table-layout: fixed; 
         }
 
         .oval-table th {
             background-color: #1e2d32;
             color: white;
-            padding: 10px; /* Padding inside header */
+            padding: 10px; 
             text-align: left;
             font-family: Geaorgia, serif;
             font-size: 15px;
         }
 
         .oval-table td {
-            padding: 15px; /* Padding inside cells */
+            padding: 15px;
             font-family: Georgia, serif;
             font-size: 15px;
             border-bottom: 3px solid #f9f9f9;
@@ -171,26 +170,26 @@
         }
         
          a {
-            color: #33c481; /* Цвет для всех ссылок */
+            color: #33c481; 
             word-break: break-all;
             
         }
         
-        /* Footer Section */
+       
         .footer {
-            max-width: 85%; /* Ограничиваем максимальную ширину секции */
-            margin: 90px auto; /* Центрируем секцию по горизонтали */
-            display: flex; /* Используем flex для размещения текста и картинки на одной линии */
-            justify-content: space-between; /* Отправляем элементы по разным сторонам */
-            align-items: center; /* Центрируем элементы по вертикали */
+            max-width: 85%; 
+            margin: 90px auto; 
+            display: flex; 
+            justify-content: space-between;
+            align-items: center; 
             padding-left: 30px;
             padding-right: 30px;
         }
 
         .footer-line {
             height: 15px;
-            background-color: #56dba1; /* Green color */
-            margin-top: 10px; /* Space above the line */
+            background-color: #56dba1; 
+            margin-top: 10px; 
             width: 100%;
         }
         
@@ -205,7 +204,7 @@
             color: #1c2c35;
             font-family: Volkorn, serif;
             font-size: 25px;
-            margin-bottom: 5px; /* Add space between the label and the input */
+            margin-bottom: 5px; 
             display: block;
        }
        
@@ -213,7 +212,7 @@
             padding: 10px 20px;
             background-color: #f1f1f1;
             border: 1px solid #ddd;
-            border-radius: 50px; /* Oval shape */
+            border-radius: 50px; 
             margin-bottom: 15px;
             width: 100%;
             font-weight: bold;
@@ -229,7 +228,7 @@
            color: white;
            padding: 10px 20px;
            border: none;
-           border-radius: 50px; /* Oval button */
+           border-radius: 50px; 
            cursor: pointer;
            font-size: 15px;
            font-weight: bold;
@@ -237,7 +236,7 @@
         }
 
        .form-submit:hover {
-           background-color: #45c08a; /* Darken button on hover */
+           background-color: #45c08a; 
         }
 
        .form-container {
@@ -275,19 +274,19 @@
     </section>
     
     
-      <!-- Tabs Section with Content -->
+
     <section id="resursi" class="resursi">
     <div class="tabs-content-container">
-        <!-- Tabs Menu (Above the content, positioned top-left) -->
+      
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'tab1')">Visi digitālie resursi</button>
             <button class="tab-button" onclick="openTab(event, 'tab2')">Pamatskolai</button>
             <button class="tab-button" onclick="openTab(event, 'tab3')">Vidusskolai</button>
         </div>
 
-        <!-- Tab Content (Oval Content, placed below tabs) -->
+     
         <div id="tab1" class="tab-content active">
-            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> 
                 <colgroup>
                     <col style="width: 20%;">
                     <col style="width: 10%;">
@@ -343,7 +342,7 @@
         </div>
 
         <div id="tab2" class="tab-content">
-             <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+             <table class="oval-table" border="0" cellspacing="0" cellpadding="0">
                 <colgroup>
                     <col style="width: 20%;">
                     <col style="width: 10%;">
@@ -372,7 +371,7 @@
         </div>
 
         <div id="tab3" class="tab-content">
-            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> <!-- Removed cellpadding from here -->
+            <table class="oval-table" border="0" cellspacing="0" cellpadding="0"> 
                 <colgroup>
                     <col style="width: 20%;">
                     <col style="width: 10%;">
@@ -403,7 +402,7 @@
     </section>
     
     
-    <!-- Footer Section -->
+    
     <div class="footer">
         <div class="paldies">Paldies, ka izmantojat mūsu vietni!</div>
         <div class="form-container">
@@ -423,20 +422,20 @@
         function openTab(event, tabName) {
             var i, tabContent, tabButtons;
 
-            // Hide all tab content
+           
             tabContent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabContent.length; i++) {
                 tabContent[i].style.display = "none";
                 tabContent[i].classList.remove("active");
             }
 
-            // Remove active class from all buttons
+            
             tabButtons = document.getElementsByClassName("tab-button");
             for (i = 0; i < tabButtons.length; i++) {
                 tabButtons[i].classList.remove("active");
             }
 
-            // Show the current tab and add active class to the button
+           
             document.getElementById(tabName).style.display = "block";
             document.getElementById(tabName).classList.add("active");
             event.currentTarget.classList.add("active");
