@@ -185,7 +185,7 @@
         }
 
         .footer-line {
-            height: 5px;
+            height: 15px;
             background-color: #56dba1; /* Green color */
             margin-top: 10px; /* Space above the line */
             width: 100%;
@@ -195,8 +195,59 @@
             color: #1c2c35;
             font-family: Broadway, serif;
             font-size: 35px;
-       }
         
+       }
+       
+       .form-jaut {
+            color: #1c2c35;
+            font-family: Volkorn, serif;
+            font-size: 25px;
+            
+       }
+       
+       .form-content {
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 50px; /* Oval shape */
+            margin-bottom: 15px;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .form-submit {
+           background-color: #56dba1;
+           color: white;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 50px; /* Oval button */
+           cursor: pointer;
+           font-size: 15px;
+           font-weight: bold;
+           font-family: Georgia, serif;
+        }
+
+       .form-submit:hover {
+           background-color: #45c08a; /* Darken button on hover */
+        }
+
+       .form-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 15px;
+          max-width: 500px;
+          margin: 0 auto;
+          margin-top: 20px;
+       }
+
+
+
     </style>
 
 </head>
@@ -351,12 +402,14 @@
     <!-- Footer Section -->
     <div class="footer">
         <div class="paldies">Paldies, ka izmantojat mūsu vietni!</div>
+        <div class="form-container">
         <form action="#" method="post">
-            <label for="website">Kādu digitālo resursu, jūsuprāt, vajadzētu pievienot?</label><br>
-            <input type="text" id="website" name="website" placeholder="Jūsu idejas" required>
-            <button type="submit">Nosūtīt</button>
+            <label class="form-jaut" for="website">Kādu digitālo resursu, jūsuprāt, vajadzētu pievienot?</label><br>
+            <input type="text" id="website" name="website" class="form-content" placeholder="Jūsu idejas" required>
+            <button type="submit" class="form-submit">Nosūtīt</button>
         </form>
         
+    </div>
     </div>
     
     <div class="footer-line"></div>
